@@ -12,9 +12,9 @@
             <?php
 			      $Session = Gdn::Session();
 					if ($this->Menu) {
-						$this->Menu->AddLink('Dashboard', T('Dashboard'), '/dashboard/settings', array('Garden.Settings.Manage'));
-						// $this->Menu->AddLink('Dashboard', T('Users'), '/user/browse', array('Garden.Users.Add', 'Garden.Users.Edit', 'Garden.Users.Delete'));
-						// $this->Menu->AddLink('Activity', T('Activity'), '/activity');
+						$this->Menu->AddLink('Dashboard', T('Dashboard'), '/dashboard/settings', array('Garden.Settings.Manage'), array('class' => 'Dashboard'));
+						// $this->Menu->AddLink('Dashboard', T('Users'), '/user/browse', array('Garden.Users.Add', 'Garden.Users.Edit', 'Garden.Users.Delete'),  array('class' => 'Users'));
+						$this->Menu->AddLink('Activity', T('Activity'), '/activity', FALSE, array('class' => 'Activity'));
 						if ($Session->IsValid()) {
 							$Name = $Session->User->Name;
 							$CountNotifications = $Session->User->CountNotifications;
