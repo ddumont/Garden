@@ -14,7 +14,7 @@
 					if ($this->Menu) {
 						$this->Menu->AddLink('Dashboard', T('Dashboard'), '/dashboard/settings', array('Garden.Settings.Manage'));
 						// $this->Menu->AddLink('Dashboard', T('Users'), '/user/browse', array('Garden.Users.Add', 'Garden.Users.Edit', 'Garden.Users.Delete'));
-						$this->Menu->AddLink('Activity', T('Activity'), '/activity');
+						// $this->Menu->AddLink('Activity', T('Activity'), '/activity');
 						if ($Session->IsValid()) {
 							$Name = $Session->User->Name;
 							$CountNotifications = $Session->User->CountNotifications;
